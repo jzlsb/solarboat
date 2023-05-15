@@ -1,6 +1,6 @@
 *
 !.gitignore
-!0/*
+!0
 !0.orig/*
 !constant/*
 !system/*
