@@ -1,4 +1,11 @@
-*
+
 !.gitignore
-!/0/
-*
+!0/*
+!0.orig/*
+!constant/*
+!system/*
+!Allclean
+!Allrun
+!run
+!mesh
+!solarboat_complete.stl
