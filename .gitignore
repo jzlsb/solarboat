@@ -1,11 +1,1 @@
-*
-!.gitignore
-!0/alpha.water
-!0.orig/*
-!constant/*
-!system/*
-!Allclean
-!Allrun
-!run
-!mesh
-!solarboat_complete.stl
+
