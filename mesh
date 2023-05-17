@@ -12,7 +12,7 @@ runApplication surfaceFeatureExtract
 
 runApplication blockMesh
 
-for i in 1 2 3 4 5 6
+for i in 0 1 2 3 4 5 6
 do
     runApplication -s "$i" \
         topoSet -dict system/topoSetDict.${i}
@@ -21,7 +21,13 @@ do
         refineMesh -dict system/refineMeshDict -overwrite
 done
 
-runApplication snappyHexMesh -overwrite
+runApplication decomposePar
+
+#runApplication snappyHexMesh -overwrite
+
+mpirun -np 4 snappyHexMesh >log.snappyHexMesh -parallel -overwrite 
+
+runApplication reconstructParMesh -constant
 
 restore0Dir
 
