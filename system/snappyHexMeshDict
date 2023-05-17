@@ -38,7 +38,25 @@ geometry
             type wall;
         }
     }
-}
+
+    foreFoil
+    {
+        type searchableBox;
+        min (2.96 -0.87 -0.58);
+        max (3.2 -0.48 -0.52);
+        //min (2.96 -0.48 -0.52);
+        //max (3.2 -0.87 -0.58);
+    }
+
+    aftFoil
+    {
+        type searchableBox;
+        min (0.14 -0.2 -0.6);
+        max (0.42 0 -0.52);
+        //min (0.14 0 -0.52);
+        //max (0.42 -0.2 -0.6);
+    }
+};
 
 
 // Settings for the castellatedMesh generation.

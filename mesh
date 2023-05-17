@@ -25,7 +25,7 @@ runApplication decomposePar
 
 #runApplication snappyHexMesh -overwrite
 
-mpirun -np 4 snappyHexMesh >log.snappyHexMesh -parallel -overwrite 
+mpirun -np 6 snappyHexMesh >log.snappyHexMesh -parallel -overwrite 
 
 runApplication reconstructParMesh -constant
 
