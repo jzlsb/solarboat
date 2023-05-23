@@ -10,6 +10,7 @@ cp -f solarboat_complete.stl constant/triSurface/
 
 runApplication surfaceFeatureExtract
 
+m4 < system/blockMeshDict.m4 > system/blockMeshDict
 runApplication blockMesh
 
 for i in 0 1 2 3 4 5 6
@@ -25,7 +26,7 @@ runApplication decomposePar
 
 #runApplication snappyHexMesh -overwrite
 
-mpirun -np 6 snappyHexMesh >log.snappyHexMesh -parallel -overwrite 
+mpirun -np 4 snappyHexMesh >log.snappyHexMesh -parallel -overwrite 
 
 runApplication reconstructParMesh -constant
 
